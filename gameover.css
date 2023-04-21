@@ -1,0 +1,58 @@
+html {
+  background-image: url("resources/background4.png");
+  background-attachment: fixed;
+  background-repeat: round;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gameover-img {
+    display: block;
+    margin-left:25%;
+    margin-right: 25%;
+    margin-top: 10rem;
+    width: 250%;
+}
+
+#gameover-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #72db76;
+  color: white;
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#button a {
+  text-decoration: none;
+  color: white;
+}
+ 

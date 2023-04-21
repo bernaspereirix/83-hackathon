@@ -1,0 +1,166 @@
+html {
+  background-image: url('resources/background.png');
+  background-attachment: fixed;
+  background-repeat: round;
+}
+
+canvas {
+  background-image: url('resources/background.png');
+  background-attachment: fixed;
+  background-repeat: round;
+}
+
+body {
+  cursor: url("resources/wand-cursor32.png"), auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.title-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#title-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.text {
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: -webkit-center;
+  font-family: 'Space Mono', monospace;
+}
+
+
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #72db76;
+  color: white;
+  font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3E8E41;
+}
+.duck {
+  width: 50px;
+  height: 50px;
+  background-image: url("resources/duck.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 71%;
+  transform: scale(-0.8);
+  animation: fly 9s linear infinite alternate,
+      bounce 1s ease-in-out infinite alternate;
+}
+
+.duck1 {
+  width: 150px;
+  height: 200px;
+  background-image: url('resources/birds.png');
+  left: 0;
+  top: 5%;
+  --speed: 12s;
+  --direction: normal;
+}
+
+.duck2 {
+  left: 25%;
+  top: 50%;
+  --speed: 10s;
+  --direction: normal;
+}
+
+.duck3 {
+  left: 50%;
+  top: 85%;
+  background-image: url('resources/snail.png');
+  --speed: 30s;
+  --direction: normal;
+}
+
+@keyframes fly {
+  0% {
+      left: 0;
+      transform: translateY(0) translateX(0) scaleX(1);
+  }
+
+  50% {
+      left: calc(50% - 25px);
+      transform: translateY(-20px) translateX(50%) scaleX(1);
+  }
+
+  100% {
+      left: calc(100% - 50px);
+      transform: translateY(0) translateX(100%) scaleX(-1);
+  }
+
+  /* Add wave movement */
+  0%,
+  100% {
+      transform: translateY(-50px);
+  }
+
+  50% {
+      transform: translateY(50px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-30px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+
+
+
+.duck1 {
+  animation-duration: var(--speed);
+  animation-direction: var(--direction);
+}
+
+.duck2 {
+  animation-duration: var(--speed);
+  animation-direction: var(--direction);
+}
+
+.duck3 {
+  animation-duration: var(--speed);
+  animation-direction: var(--direction);
+}
